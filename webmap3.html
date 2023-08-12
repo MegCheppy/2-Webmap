@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Universities in Nairobi</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+<div id="map"></div>
+<script>
+var map = L.map('map', {
+center: [-1.290270, 36.817496],
+zoom: 10
+});
+
+var markers = [
+{
+lat: -1.290270,
+lng: 36.817496,
+name: 'University of Nairobi',
+icon: L.icon({
+iconUrl: 'https://leafletjs.com/examples/custom-icons/leaflet-marker-icon.png',
+iconSize: [25, 25]
+})
+},
+{
+lat: -1.300994,
+lng: 36.822375,
+name: 'Kenyatta University',
+icon: L.icon({
+iconUrl: 'https://leafletjs.com/examples/custom-icons/leaflet-marker-icon.png',
+iconSize: [25, 25],
+color: 'purple'
+})
+},
+{
+lat: -1.283906,
+lng: 36.827149,
+name: 'Strathmore University',
+icon: L.icon({
+iconUrl: 'https://leafletjs.com/examples/custom-icons/leaflet-marker-icon.png',
+iconSize: [25, 25],
+color: 'orange'
+})
+},
+{
+lat: -1.309124,
+lng: 36.819580,
+name: 'Jomo Kenyatta University of Agriculture and Technology',
+icon: L.icon({
+iconUrl: 'https://leafletjs.com/examples/custom-icons/leaflet-marker-icon.png',
+iconSize: [25, 25],
+color: 'yellow'
+})
+},
+{
+lat: -1.299824,
+lng: 36.802417,
+name: 'United States International University Africa',
+icon: L.icon({
+iconUrl: 'https://leafletjs.com/examples/custom-icons/leaflet-marker-icon.png',
+iconSize: [25, 25],
+color: 'pink'
+})
+}
+];
+
+L.markerClusterGroup().addLayers(markers).addTo(map);
+</script>
+</body>
+</html>
